@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34E94DBB-6FF7-4259-9A4D-162E10B33336}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectManager</RootNamespace>
+    <AssemblyName>ProjectManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AccountBLL.cs" />
+    <Compile Include="BLL\EmailTemplateBLL.cs" />
+    <Compile Include="BLL\GroupIdBLL.cs" />
+    <Compile Include="BLL\ModuleBLL.cs" />
+    <Compile Include="BLL\ProjectBLL.cs" />
+    <Compile Include="BLL\ProjectStatusBLL.cs" />
+    <Compile Include="BLL\RoleBLL.cs" />
+    <Compile Include="BLL\SystemTypeBLL.cs" />
+    <Compile Include="Controller\AccountController.cs" />
+    <Compile Include="Controller\Connection.cs" />
+    <Compile Include="Controller\EmailController.cs" />
+    <Compile Include="Controller\GroupIdController.cs" />
+    <Compile Include="Controller\ModuleController.cs" />
+    <Compile Include="Controller\ProjectController.cs" />
+    <Compile Include="Controller\ProjectStatusController.cs" />
+    <Compile Include="Controller\RoleController.cs" />
+    <Compile Include="Controller\SystemTypeController.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\HasPassword.cs" />
+    <Compile Include="Helper\RoleChecker.cs" />
+    <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\EmailTemplateModel.cs" />
+    <Compile Include="Models\GroupIdModel.cs" />
+    <Compile Include="Models\ModuleModel.cs" />
+    <Compile Include="Models\ProjectModel.cs" />
+    <Compile Include="Models\ProjectStatusModel.cs" />
+    <Compile Include="Models\RoleModel.cs" />
+    <Compile Include="Models\SystemTypeModel.cs" />
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\form\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\EmailAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\EmailAdd.Designer.cs">
+      <DependentUpon>EmailAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\EmailTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\EmailTemplate.Designer.cs">
+      <DependentUpon>EmailTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\Project.Designer.cs">
+      <DependentUpon>Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\ProjectStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\ProjectStatus.Designer.cs">
+      <DependentUpon>ProjectStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\ProjectStatusAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\ProjectStatusAdd.Designer.cs">
+      <DependentUpon>ProjectStatusAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\Roles.Designer.cs">
+      <DependentUpon>Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\SystemType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\SystemType.Designer.cs">
+      <DependentUpon>SystemType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\form\SystemTypeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\form\SystemTypeAdd.Designer.cs">
+      <DependentUpon>SystemTypeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\EmailAdd.resx">
+      <DependentUpon>EmailAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\EmailTemplate.resx">
+      <DependentUpon>EmailTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\Project.resx">
+      <DependentUpon>Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\ProjectStatus.resx">
+      <DependentUpon>ProjectStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\ProjectStatusAdd.resx">
+      <DependentUpon>ProjectStatusAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\Roles.resx">
+      <DependentUpon>Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\SystemType.resx">
+      <DependentUpon>SystemType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\form\SystemTypeAdd.resx">
+      <DependentUpon>SystemTypeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\anh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
